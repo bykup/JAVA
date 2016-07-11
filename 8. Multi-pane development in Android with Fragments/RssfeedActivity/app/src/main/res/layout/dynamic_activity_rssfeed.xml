@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/da_listFragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        class="com.asuper.byku.rssfeedactivity.MyListFragment"/>
+
+    <fragment
+        android:id="@+id/da_detailFragment"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        class="com.asuper.byku.rssfeedactivity.DetailFragment"/>
+</LinearLayout>
+    <!--
+        //get fragment manager
+    FragmentManager fm = getFragmentManager();
+
+        //add
+    FragmentTransaction ft = fm.beginTransaction();
+    ft.add(R.id.your_placeholder, new YourFragment());
+        //alternatively add it with a tag
+        //trx.add(R.id.your_placeholder, new YourFragment(), "detail");
+    ft.commit();
+
+        //replace
+    FragmentTransaction ft = fm.beginTransaction();
+    ft.replace(R.id.your_placeholder, new YourFragment());
+    ft.commit();
+
+        //remove
+    Fragment fragment = fm.findFragmentById(R.id.your_placeholder);
+    FragmentTransaction ft = fm.beginTransaction();
+    ft.remove(fragment);
+    ft.commit();
+
+    This replaces an existing fragment in this container.
+
+    If you want to add the transaction to the backstack of Android, you use the addToBackStack().
+    This will add the action to the history stack of the activity. Will allow to revert the
+    fragment changes via the back button.
+    -->

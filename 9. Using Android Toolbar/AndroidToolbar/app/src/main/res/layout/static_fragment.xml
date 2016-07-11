@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/s_f_listFragment"
+        android:layout_weight="1"
+        class="com.asuper.byku.rssfeedactivity.MyListFragment"
+        />
+    <fragment
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/s_f_detailFragment"
+        class="com.asuper.byku.rssfeedactivity.DetailFragment"/>
+<!-- class - statically linking to a class
+    using this scenario makes sense if you have different static layout files
+    for different device configurations-->
+</LinearLayout>
